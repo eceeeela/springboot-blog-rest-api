@@ -1,10 +1,14 @@
 package com.springboot.blog.entity;
 
 
+import com.springboot.blog.utils.Comment;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 // A Lombok annotation that generates boilerplate code like getters, setters, toString(), equals(), and hashCode() methods.
@@ -36,4 +40,9 @@ public class Post {
 
     @Column(name = "content", nullable = false)
     private String content;
+
+
+    // use set instead of list in here cuz set is not duplicable
+    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true) // remove parent it will be removed as well
+    private Set<Comment> comments = new HashSet<>();
 }
