@@ -3,15 +3,16 @@ package com.springboot.blog.entity;
 
 import com.springboot.blog.utils.Comment;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
+//@Data
 // A Lombok annotation that generates boilerplate code like getters, setters, toString(), equals(), and hashCode() methods.
+
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 
