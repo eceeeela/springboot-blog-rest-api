@@ -1,12 +1,9 @@
-package com.springboot.blog.utils;
+package com.springboot.blog.entity;
 
-import com.springboot.blog.entity.Post;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.awt.print.Pageable;
 
 @Data
 @AllArgsConstructor

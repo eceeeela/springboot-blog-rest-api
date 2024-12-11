@@ -1,7 +1,6 @@
 package com.springboot.blog.entity;
 
 
-import com.springboot.blog.utils.Comment;
 import jakarta.persistence.*;
 import lombok.*;
 
